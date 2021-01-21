@@ -1,0 +1,23 @@
+<div id="input-headline" *ngIf="customer"><h2>{{customer._id ? "Edit customer" : "Add customer" }}</h2>
+  <div class="p-formgroup-inline">
+    <div class="p-field">
+      <input type="text" pInputText [(ngModel)]="customer.firstName" placeholder="First Name"/>
+    </div>
+    <div class="p-field">
+      <input type="text" pInputText [(ngModel)]="customer.lastName" placeholder="Last Name"/>
+    </div>
+    <div class="p-field">
+      <p-calendar [(ngModel)]="customer.birthday" [minDate]="minDateValue" [maxDate]="maxDateValue" dateFormat="MM d, y"
+                  placeholder="Birthday"></p-calendar>
+    </div>
+    <div class="p-col-align-center">
+      <p-checkbox label="Is Active" [(ngModel)]="customer.active" [binary]="true"></p-checkbox>
+    </div>
+  </div>
+  <div class="p-col-3 p-grid">
+      <button pButton type="button" label="Save" class="p-button-outlined p-button-primary input-btn"
+              (click)="finishWithApply()"></button>
+      <button pButton type="button" label="Cancel" class="p-button-outlined p-button-danger input-btn"
+              (click)="finishWithCancel()"></button>
+    </div>
+</div>

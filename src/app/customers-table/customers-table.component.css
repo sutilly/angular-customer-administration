@@ -1,0 +1,23 @@
+.table-caption {
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon-only-column {
+  width: 6%;
+  text-align: center;
+}
+
+.active-column {
+  width: 11%;
+}
+
+.inactive {
+  color: #D3312F;
+}
+
+.active {
+  color: #50AF50;
+}
+
+
